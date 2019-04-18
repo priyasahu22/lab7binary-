@@ -124,17 +124,10 @@ class BiST{
     			}
     			else{ 
     			    Node *temp = find_min1(current->right);
-    			    if(current == root){
+    			   
     	                current->data = temp->data;
     	                replace_at_parent1(NULL,temp);
     				    delete temp;
-    			    }
-    			    else{
-    				    replace_at_parent1(temp,current);
-    				    temp->parent = current->parent;
-    				    temp->left = current->left;
-    				    delete temp;
-    			    }
     			}
 			}
 			
